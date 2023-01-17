@@ -1,0 +1,246 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, Arial, "Lucida Grande", sans-serif;
+	color: #222;
+}
+
+.controls {
+	padding: 3px;
+	border-bottom: solid 1px #ccc;
+	height: 19px;
+}
+
+.controls input {
+	font-size: 14px;
+	line-height: 24px;
+	border-radius: 2px;
+	padding: 0 6px;
+}
+
+.controls button {
+	-moz-user-select: none;
+	background-color: #206FA9;
+	border: 1px solid #1A5B8A;
+	border-radius: 4px 4px 4px 4px;
+	color: #FFFFFF;
+	cursor: pointer;
+	display: inline-block;
+	margin: 10px;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1.4em;
+	text-transform: uppercase;
+}
+
+/* These glyphs are on the small side, make them look more natural when
+compared to the back/forward buttons */
+.controls #home,.controls #terminate {
+	font-size: 24px;
+}
+
+.controls #reload {
+	font-size: 20px;
+}
+
+.location {
+	border: solid 1px #ccc;
+	padding: 2px;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+}
+
+.controls {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-justify-content: flex-end;
+	justify-content: flex-end;
+}
+
+.controls #location-form {
+	-webkit-flex: 1;
+	display: -webkit-flex;
+	-webit-flex-direction: column;
+}
+
+.controls #center-column {
+	-webkit-flex: 1;
+}
+
+#sad-webview,webview {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+/* The reload button turns into a spinning trobber */
+.loading #reload {
+	-webkit-animation: spinner-animation .5s infinite linear;
+	-webkit-transform-origin: 50% 55.5%;
+}
+
+@
+-webkit-keyframes spinner-animation { 0% {
+	-webkit-transform: rotate(0deg);
+}
+
+100%
+{
+-webkit-transform
+:
+ 
+rotate
+(360deg);
+ 
+}
+}
+#sad-webview,.exited webview {
+	visibility: hidden;
+	visibility: hidden;
+}
+
+.exited #sad-webview {
+	visibility: visible;
+	background: #343f51;
+	text-align: center;
+	color: #fff;
+}
+
+#sad-webview h2 {
+	font-size: 14px;
+}
+
+#sad-webview p {
+	font-size: 11px;
+}
+
+#sad-webview-icon {
+	font-size: 96px;
+	margin-bottom: 10px;
+}
+
+/* Variant of the crashed page when the process is intentionally killed (in that
+case we use a different background color and label). */
+.exited #sad-webview #killed-label {
+	display: none;
+}
+
+.killed #sad-webview {
+	background: #393058;
+}
+
+.killed #sad-webview #killed-label {
+	display: block;
+}
+
+.killed #sad-webview #crashed-label {
+	display: none;
+}
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 99999;
+	opacity: 0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.modalDialog>div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	/*background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);*/
+}
+
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+	background: #206FA9;
+}
+
+#status {
+	color: green;
+}
+
+.update {
+	padding: 3px;
+	border-bottom: solid 1px #ccc;
+	height: 19px;
+	visibility: hidden;
+}
+
+#versionDisplay{
+	font-size: 15px;
+}
+
+.modalDialogUpdate {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 99999;
+	opacity: 0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.modalDialogUpdate>div {
+	width: 450px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	/*background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);*/
+}
+
+#updateText1,#updateText2 {
+	text-align: center;
+	position: relative;
+}

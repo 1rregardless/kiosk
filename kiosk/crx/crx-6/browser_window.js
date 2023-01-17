@@ -1,0 +1,1 @@
+(function(){requirejs.config({baseUrl:"",paths:{underscore:"lib/underscore/underscore",urijs:"lib/uri.js/URI",punycode:"lib/uri.js/punycode",SecondLevelDomains:"lib/uri.js/SecondLevelDomains",IPv6:"lib/uri.js/IPv6"},shim:{_:{exports:"_"}},deps:["browser"],callback:function(e){return window.browser=new e,window.browser.setup(),window.onresize=browser.doLayout}})}).call(this);

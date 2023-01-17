@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:#FFFFFF;}
+</style>
+<title>btn_playback_widget_pause_focus</title>
+<g id="pause_button">
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="193.525" y1="698.15" x2="20.825" y2="698.15" gradientTransform="matrix(1 0 0 1 -7.18 -598.15)">
+		<stop  offset="0" style="stop-color:#225FA0"/>
+		<stop  offset="1" style="stop-color:#235E9E"/>
+	</linearGradient>
+	<circle class="st0" cx="100" cy="100" r="86.3"/>
+	<path id="pause" class="st1" d="M87.1,58.1H71c-3.6,0.1-6.4,3-6.4,6.6v70.7c0,3.6,2.8,6.5,6.4,6.6h16.1c3.6-0.1,6.4-3,6.4-6.6V64.6
+		C93.5,61.1,90.6,58.2,87.1,58.1z M129,58.1h-16.1c-3.6,0-6.6,2.9-6.6,6.5c0,0,0,0,0,0v70.7c0,3.6,2.9,6.6,6.5,6.6c0,0,0,0,0,0H129
+		c3.6,0,6.6-2.9,6.6-6.6l0,0V64.6C135.5,61,132.6,58.1,129,58.1L129,58.1z"/>
+</g>
+</svg>

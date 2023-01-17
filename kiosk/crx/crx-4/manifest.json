@@ -1,0 +1,47 @@
+
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "DAC App",
+  "short_name":"DAC App",
+  "version": "4.0",
+  "minimum_chrome_version": "52",
+  "kiosk_enabled": true,
+  "kiosk_only" : true,
+  "offline_enabled": true,
+  "icons": {
+    "16": "icon_16.png",
+    "48": "icon_48.png",
+    "128": "icon_128.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["main.js"]
+    }
+  },
+  "permissions": [
+    {
+      "fileSystem": [
+        "write",
+        "retainEntries",
+        "directory",
+        "requestFileSystem"
+        
+      ]
+    },
+    "storage",
+    "usb",
+    "audioCapture",
+    "unlimitedStorage",
+    "gcm"
+    
+  ],
+  "file_handlers": {
+    "text": {
+      "types": [
+        "text/*"
+      ]
+    }
+  }
+}

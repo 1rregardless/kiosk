@@ -1,0 +1,62 @@
+{   "update_url": "http://clients2.google.com/service/update2/crx?response=updatecheck&x=id%3Ddffnknadheamddajeahdoifigohecmfa%26uc",
+    "name": "ETS APCJ",
+    "version": "1.0.14",
+    "manifest_version": 2,
+    "minimum_chrome_version": "31",
+    "icons": {
+        "128": "img/apcj_128.png",
+        "16": "img/apcj_32.png"
+    },
+    "app": {
+        "background": {
+            "scripts": [
+                "scripts/background.js"
+            ],
+            "persistent": false
+        }
+    },
+    "permissions": [
+        "unlimitedStorage",
+        "audioCapture",
+        "videoCapture",
+        "system.memory",
+        "system.cpu",
+        "system.storage",
+        "system.network",
+        "webview",
+        "power",
+        "http://*/",
+        "https://*/",
+        "enterprise.deviceAttributes",
+        {"fileSystem": [
+			"write",
+			"retainEntries",
+			"directory"       
+		]}
+    ],
+    "sockets": {
+        "udp": {
+          "send": ["*"],
+          "bind": ["*"],
+          "multicastMembership": ""
+        }
+      },
+    "webview": {
+        "partitions": [
+            {
+                "name": "webview",
+                "accessible_resources": [
+                    "app/js/chromeApp.js",
+                    "index.html",
+                    "*",
+                    "*.html",
+                    "js/*.js",
+                    "preapp/*",
+                    "scripts/*"
+                ]
+            }
+        ],
+        "canGoBack": false
+    },    
+    "kiosk_enabled": true
+}

@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "ouIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

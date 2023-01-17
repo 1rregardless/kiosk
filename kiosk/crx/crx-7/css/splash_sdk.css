@@ -1,0 +1,149 @@
+@font-face { /* declare fonts */
+	font-family: "Museo500";
+	src: url("../fonts/museosans-500.otf") format("opentype");
+		/* display fonts */
+		h1 { font: 24px/1 Museo500, Verdana, sans-serif; }
+		h2 { font: 18px/1 Museo500, Verdana, sans-serif; }
+		h3 { font: 14px/1 Museo500, Verdana, sans-serif; }
+		#entrytext { font: 14px/1 Museo500, Verdana, sans-serif; }
+	}
+
+
+
+body {
+	background: url('../splash_background.png');
+	background-color: #efefef;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	line-height: 1.5;
+	color: white;
+}
+
+h1 {
+	font-family: Museo500;
+}
+
+#entry-text {
+	font-family: Museo500;
+}
+
+.fa-registered {	
+	font-size: 50%;
+}
+.container {
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+    top: 130px;
+	width: 500px;
+	padding: 20px;
+	position: relative;
+	background: black;	
+	background-color:rgba(0,0,0,0.6);
+	text-align: center;
+	border-radius:40px;
+}
+
+
+
+.icon {
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+	width: 175px;
+	height: 175px;
+	position: relative;
+	top: 100px;
+	background: url('../icon_128.png');
+}
+
+.icon-old {
+	display: inline-block;
+	margin: auto;
+	width: 175px;
+	height: 173px;
+	position: absolute;
+	top: 100px;
+	left: 540px;
+	background: url('../icon_128.png');
+}
+
+#saveButton {
+  font-family: arial;
+  font-weight: bold;
+  color: white !important;
+  font-size: 14px;
+  padding: 10px 25px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 2px solid #3866A3;
+  background: #63B8EE;
+  background: linear-gradient(top,  #63B8EE,  #468CCF);
+  background: -ms-linear-gradient(top,  #63B8EE,  #468CCF);
+  background: -webkit-gradient(linear, left top, left bottom, from(#63B8EE), to(#468CCF));
+  background: -moz-linear-gradient(top,  #63B8EE,  #468CCF);
+}
+
+#cancellink {
+	color: white;
+}
+
+#institutionSearch {
+	width: 400px;
+	color: black;
+}
+
+#institutionList {
+	width: 400px;
+	color: black;
+	position: relative;
+	top: -10px;
+	overflow-y: auto;
+}
+
+#profileList {
+	width: 400px;
+	color: black;
+}
+
+
+.popover.top>.arrow:after {
+	bottom: 2px!important;	
+}
+.popover-content {
+	width: 250px;
+	color: black;
+}
+
+.popover-title {
+	width: 250px;
+	color: black;
+}
+
+.noresult {
+	background-color: rgb(255,124,124);
+	color: white;
+}
+
+#version-number {
+	font-size: 6pt;
+}
+
+#messagebar {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#messagetext {
+	font-size: 10pt;
+}
+
+#errorinfo {
+	color: white;
+	display: block;
+	font-size: 14pt;
+	background-color: red;
+}

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>PLTW Kite Student Portal</title>
+  	<meta name="description" content="PLTW Kite Student Portal">
+  	<link rel="stylesheet" href="styles.css">
+</head>
+<body id="nonkioskview" style="background-image: url('kite-bg.jpg');">
+		<div class="sw clearfix">	
+				<div id="signin-col" class="signin-c" style="background-image: url('signin-bg.png');">
+					<div class="signin-error">
+						<p>The PLTW Kite Student Portal app can only be run in kiosk mode. Please contact your system administrator to have the kiosk app installed on this device.</p>
+					</div>
+					<div>&nbsp;</div>
+				</div>
+		</div>
+</body>
+<script type="text/javascript">
+  document.getElementById('nonkioskview').style.backgroundImage='url("kite-bg.jpg")';
+  document.getElementById('signin-col').style.backgroundImage='url("signin-bg.png")';
+  document.addEventListener('contextmenu', event => event.preventDefault());
+</script>
+</html> 

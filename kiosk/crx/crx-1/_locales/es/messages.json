@@ -1,0 +1,10 @@
+{
+   "appName": {
+      "description": "The title of the application, displayed in the web store.",
+      "message": "eTests Online"
+   },
+   "appDescription": {
+      "description": "The description of the application, displayed in the web store and in chrome://extensions.",
+      "message": "eTests Online Chrome Kiosk"
+   }
+}

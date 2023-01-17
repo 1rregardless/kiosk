@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>ldb_assist</title>
+
+  <script type="text/javascript">
+    LdbAssist = null;  
+    statusText = 'NO-STATUS';
+
+    // Indicate load success.
+    function moduleDidLoad() {
+      LdbAssist = document.getElementById('ldb_assist');
+      updateStatus('SUCCESS-Sending Hello');
+
+      // check the configuration - and then request the keys
+
+      // Get the user key
+      var userKey = 'AAAAAA';
+      var notification = new Notification('Notification title', {
+                        icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
+                        body: "updateWebView............"
+                      });
+
+      // Send a message to the Native Client module
+      LdbAssist.postMessage('sessionKey');
+    }
+
+    
+
+    function handleMessage(message_event) {
+      updateStatus('SUCCESS-Message Received');
+      alert(message_event.data);
+      updateStatus(message_event.data);
+
+      // check the type of message received
+      // session type
+
+      var sessionbase = 'https://smc-service-cloud.respondus2.com/MONServer/chromebook/init.do?';
+
+
+
+
+
+    }
+
+    function pageDidLoad() {
+      if (LdbAssist == null) {
+        updateStatus('LOADING...');
+      } else {
+        updateStatus();
+      }
+    }
+
+    function updateStatus(opt_message) {
+      if (opt_message)
+        statusText = opt_message;
+      var statusField = document.getElementById('statusField');
+      if (statusField) {
+        statusField.innerHTML = statusText;
+      }
+    }
+  </script>
+</head>
+<body onload="pageDidLoad()">
+
+  <h1>LDB ASSIST</h1>
+  <p>
+    <div id="listener">
+      <script type="text/javascript">
+        var listener = document.getElementById('listener');
+        listener.addEventListener('load', moduleDidLoad, true);
+        listener.addEventListener('message', handleMessage, true);
+        console.log("LOADING LISTENERS.............");
+      </script>
+
+      <embed id="ldb_assist"
+             width=0 height=0
+             src="ldb_assist.nmf"
+             type="application/x-pnacl" />
+    </div>
+  </p>
+
+  <h2>Status <code id="statusField">NO-STATUS</code></h2>
+</body>
+</html>

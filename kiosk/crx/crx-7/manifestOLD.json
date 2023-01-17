@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Respondus NK",
+  "default_locale":"en",
+  "short_name": "Respondus NK",
+  "description":"Respondus LockDown Browser is a custom browser that locks down the exam environment for assessments.",
+  "version": "1.0.0.9",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": ["app.window.alwaysOnTop", "overrideEscFullscreen", "clipboardWrite","power", "storage", "alarms", "notifications", "webview", "gcm", "https://*/*", "http://*/*"],
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "minimum_chrome_version": "46",
+  "kiosk_enabled" : true
+}
+
+

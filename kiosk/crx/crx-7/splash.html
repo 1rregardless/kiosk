@@ -1,0 +1,58 @@
+<html>
+<head>
+  <title>LockDown Browser for Chromebook</title>
+  
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/splash.css">
+
+  <meta content="authenticity_token" name="csrf-param" />
+  <meta content="5FtG/lK43fUptMsYGEAayQTv90cvs7dSZRrpbavOg7A=" name="csrf-token" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="messagebar"> 
+  <span id="messagetext">Message text</span>
+</div>
+
+
+
+<div class="icon"> 
+</div>
+<div class="container">
+
+  <div id="main_header_text" style="display:none;">
+	<h1 class="i8" data-string="lms_title"></h1>
+  </div>
+
+   <div id="errortext" style="display:none;">
+  <span id="errorinfo" class="well"></span>
+  </div>
+
+	
+
+</div>
+
+
+
+
+<div id="listener">
+      
+
+      <embed id="ldb_assist"
+             width=0 height=0
+             src="native/ldb_assist.nmf"
+             type="application/x-pnacl" />
+    </div>
+
+
+   <script src="js/jquery.min.js"></script>
+   <script src="js/bootstrap.js"></script>
+   <script src="js/splash_control.js"></script>
+   
+
+
+</body>
+</html>

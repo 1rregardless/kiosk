@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "College Board QA",
+  "default_locale":"en",
+  "short_name": "College Board QA",
+  "description":"College Board LockDown Browser is a custom browser that locks down the exam environment for assessments.",
+  "version": "1.0.0.6",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": ["clipboardWrite","power", "storage", "alarms", "notifications", "webview", "gcm", "https://*/*", "http://*/*"],
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "minimum_chrome_version": "46",
+  "kiosk_enabled" : true,
+  "kiosk_only" : true
+}
+
+

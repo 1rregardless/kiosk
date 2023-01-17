@@ -1,0 +1,25 @@
+#nonkioskview { background: #f5f5f5 no-repeat center top; }
+
+.signin-c { width: 490px; padding: 120px 0 0; background: no-repeat; -moz-box-shadow:0px 0px 2px 2px rgba(0,0,0,.3); -moz-border-radius:4px; box-shadow:0px 0px 2px 2px rgba(0,0,0,.3); border-radius:4px; }
+.signin-c h1 { color:#fff; font-size: 18pt; background: #b22130}
+.signin, .signin-c h1 { position:relative; margin: 20px 0 0 30px; }
+.signin input { background:#fff; width: 310px; -moz-border-radius:4px; border-radius:4px; padding: 15px 15px 15px 100px; border:0; font-size: 17pt; }
+.signin-pltw { margin-left: -15px; margin-right: -15px; }
+.signin-pltw input {width:80%; background-color:transparent; border:none; border-bottom:1px solid #393939; box-shadow:none; border-radius:0px; color:#393939;
+  margin-bottom: 15px; display: block; height: 34px; padding: 6px 12px; font-size: 14px; line-height: 1.42857143; background-image: none; transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+body { background: #f5f5f5; letter-spacing:.05em; font-size: 80%; margin: 0; padding:0;  line-height: 1.4;height: 100%; position:relative;}
+
+.signin-error { width:430px; margin: 0 auto;  }
+#error-pltw { width:auto; display:inline-block;}
+.signin-error img { float: left; margin: 0px 15px 0 0; }
+.signin-error p { color:#fff; font-size: 1.2em; }
+.signin-error p.error-message-pltw { color: #fe57a1; }
+.signin-close { float:left; list-style:none; margin: 10px 0; padding: 5px; }
+
+#signinview > div {
+  height:100%;
+}
+.sw { position:relative; width: 490px; margin: 100px auto 0; }
+.w { max-width:1000px; min-width: 768px; margin: 0 auto; }

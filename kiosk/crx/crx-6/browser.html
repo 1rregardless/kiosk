@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../browser.css">
+    <script data-main="browser_window" src="../lib/requirejs/require.js"></script>
+  <body>
+    <div id="controls">
+
+      <button id="back" title="Go Back">&#9664;</button>
+      <button id="forward" title="Go Forward">&#9654;</button>
+      <button id="reload" title="Reload">&#10227;</button>
+      <button id="tests" title="Tests">&#11425;</button>
+
+      <form id="location-form">
+        <div id="center-column">
+          <input id="location" type="text" value="">
+        </div>
+        <input type="submit" value="Go">
+      </form>
+
+    </div>
+
+    <webview id="webview" style="width:100%; height:100%;" src="about:blank"></webview>
+
+    <div id="sad-webview" class="full-page-hidden">
+      <div id="page-container">
+        <div>
+          <div class="error-wrapper">
+            <br>
+            <br>
+            <div id="error-container" class="center-horizontally color-chooser tts-start">
+              <p id="error-summary" class='error-title'></p>
+              <p id="error-instruction" class='label-red'></p>
+              <p id="error-address"></p>
+              <hr/>
+              <p id="error-adminmessage" class="label-underline">Message to Test Administrator:</p>
+              <p id="error-description"></p>
+              <p id="error-network">
+                Please contact your local IT staff to look into this network error. They can contact <br/>
+                DRC Customer Support if they need additional help to resolve this matter.
+              </p>
+              <div id="network-error-buttons">
+                <button type="button" class="drc-button-blue close-app" title="OK" alt="ok" tabindex="2" data-method="ok">
+                  OK
+                </button>
+              </div>
+            </div> <!-- /#error-container -->
+          </div><!-- /.error-wrapper -->
+        </div>
+      </div>
+    </div>
+    <div id="test-webview" class="full-page-hidden">
+      <div id="test-controls">
+        <button name="ComputerDetailsRequest">ComputerDetailsRequest</button>
+        <button name="SecurityDetails">SecurityDetails</button>
+        <button name="TestExit">TestExit</button>
+        <button name="quit">quit</button>
+        <button name="addReadinessTests">addReadinessTests</button>
+        <button name="ClearCache">ClearCache</button>
+        <button name="saveReadiness">saveReadiness</button>
+        <button name="getSavedReadiness">getSavedReadiness</button>
+        <button name="UpdateConfig">UpdateConfig</button>
+        <button name="EnableLoadSimulation">EnableLoadSimulation</button>
+        <button name="DisableLoadSimulation">DisableLoadSimulation</button>
+        <button name="ShowRegistration" data-type="background">ShowRegistration</button>
+        <button name="ClearLocalStorage">ClearLocalStorage</button>
+      </div>
+      <textarea id="parameters"></textarea>
+      <h4>Message output</h4>
+      <table id="test-output">
+      </table>
+    </div>
+    <div id="registration-webview" class="full-page-hidden">
+      <div id="page-container">
+        <div>
+          <div class="box-wrapper">
+            <h3 class="error-title">Your device has not been registered</h3>
+            <p class='label-red'>Please raise your hand and wait for help.</p>
+            <hr \>
+            <p class='label-underline'>Message to Test Administrator</p>
+            <p>This device has not been registered. Please contact an Administrator
+              to register it using the Device ID indicated below, or select the
+              District, School and Organizational Unit to register this device.
+            <div id="device-id"></div>
+            <button type="button" class="drc-button-blue kb-focusable network-error-button close-app" title="OK" alt="ok" tabindex="2">
+              OK
+            </button>
+            <hr />
+            <h3 class='error-title'>Or select your Organizational Unit</h3>
+            <div class="ou-selection">
+              <table>
+                <tr>
+                  <td>
+                    <label for="district-id">District</label>
+                  </td>
+                  <td>
+                    <select id="district-id">
+                      <option>Select a District</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="school-id">School</label>
+                  </td>
+                  <td>
+                    <select id="school-id">
+                      <option>Select a School</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="group-id">Organizational Unit</label>
+                  </td>
+                  <td>
+                    <select id="group-id">
+                      <option>Select an Organizational Unit</option>
+                    </select>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div id="registration-errors"></div>
+            <button type="button" id="cancel-group" class="drc-button-black">Clear</button>
+            <button type="button" id="select-group" class="drc-button-black">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="background-spinner" class="full-page-hidden">
+      <div class="svg-container">
+        <object data="spinner.svg" type="image/svg+xml"></object>
+        <p class="spinner-text">Contacting Device Toolkit.</p>
+      </div>
+    </div>
+    <div id="ppapi"></div>
+  </body>
+</html>

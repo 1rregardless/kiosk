@@ -1,0 +1,12 @@
+{
+  "program": {
+    "portable": {
+      "pnacl-translate": {
+        "url": "AirSecureTest.pexe"
+      },
+      "pnacl-debug": {
+        "url": "AirSecureTest_unstripped.bc"
+      }
+    }
+  }
+}

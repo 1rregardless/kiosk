@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div id="controlBar" style="display: none;">
+        <p id="controlBarMessage"></p>
+        <a id="closeControlBar" href="#">&#x274c;</a>
+        <a id="appMenuButton" href="#">Back To Site Menu</a>
+    </div>
+    <div id="mainApplicationView" style="display: none;">
+        <span id="versionNo">1.1.1</span>
+        <h1>Welcome to CASAS eTests Online</h1>
+        <div id="mainApplicationContent">
+            <div id="notInKioskView" style="display: none;">
+                <p>This application can only be launched in <strong>kiosk</strong> mode ... <br /> ... follow these procedures to configure and start it</p>
+                <ol>
+                    <li>
+                        Open Chrome browser and navigate to <a href="#" id="linkToExtensions">chrome://extensions/</a>
+                        <em> (click the link to copy it to clipboard)</em>
+                    </li>
+                    <li>Make sure "<strong>Developer mode</strong>" check-box is checked and click on "<strong>Manage kiosk applications ...</strong>" button</li>
+                    <li>
+                        Enter application identifier: <a href="#" id="linkToAppicationId"></a>
+                        <em> (click the link to copy the identifier to clipboard)</em><br />
+                        into the text box bellow "<strong>Add kiosk application:</strong>" and then click "<strong>Add</strong>" and "<strong>Done</strong>"
+                    </li>
+                    <li>Sign out from the device and start the application from the "<strong>Apps</strong>" menu on the Sign in screen taskbar</li>
+                </ol>
+            </div>
+            <div id="selectSiteView" style="display: none;">
+                <p>Please select the testing site you want to access</p>
+                <div id="testSitesList"><div id="testSitesListContent"></div></div>
+                <input type="checkbox" id="goDirectlyToTestSite" checked="checked" />
+                <label for="goDirectlyToTestSite">Go directly to this site when the application is started</label>
+            </div>
+            <div id="noSitesAvailable" style="display: none;">
+                <p id="errorGettingSites"></p>
+                <a id="retryGettingSites" href="#">Retry</a>
+            </div>
+        </div>
+        <a id="exitApplicationButton" href="#">Exit</a>
+    </div>
+</body>
+</html>

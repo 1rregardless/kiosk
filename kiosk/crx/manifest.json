@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "app": {
+    "background": {
+      "scripts": [
+        "main.js","browser.js"
+      ]
+    }
+  }, 
+  "icons": {
+    "128": "icon_128.png", 
+    "16": "icon_16.png"
+  }, 
+  "permissions":[
+			  		"webview",
+			  		"storage",
+			  		"https://*/*",
+			  		"http://*/*",
+			  		"audioCapture",
+			  		"power"
+  				],
+  "kiosk_enabled": true,
+  "offline_enabled": true,
+  "version":"3.0.0",
+  "manifest_version": 2,
+  "minimum_chrome_version": "83.0.0.0",
+  "name": "PLTW Kite Student Portal",
+  "short_name": "PLTW Kite Student Portal",
+  "author": "Rohit Yadav"
+}

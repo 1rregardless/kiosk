@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/webview.css">
+  
+    <meta charset="utf-8">
+    <style type="text/css">
+      body {
+        margin: 0px;
+      }
+    </style>
+
+    
+    
+</head>
+
+
+<body>
+
+
+<div class="container-fluid nomargin">
+<div class="tabbox">  
+  <div class="tabbox-close">
+    <a id="closewindowbutton" data-trigger="focus" data-toggle="popover" data-content="To exit LockDown Browser, you must restart your device." aria-label="Close">    
+      <i class="fa fa-close" aria-hidden="true"></i>
+    </a>
+  </div>
+  <ul id="tablist">      
+      <li class="active"><a data-target="#home" data-toggle="tab" name="tab1" class="tab">College Board</a></li>     
+  </ul>
+  </div>
+  
+
+  <div id="buttondiv">
+      <ul class="nav navbar-nav">     
+        <li><a id="leftbutton"    class="navbar-btn" href="#"><img src="images/arrow_back_24dp_on.png" alt="Back"></a></li>  
+        <li><a id="rightbutton"   class="navbar-btn" href="#"><img src="images/arrow_forward_24dp_on.png" alt="Forward"></a></li>  
+        <li><a id="reloadbutton"  class="navbar-btn" href="#"><img src="images/refresh_24dp.png" alt="Reload"></a></li>   
+        <li><a id="stopbutton"    class="navbar-btn" href="#"><img src="images/stop_24dp.png" alt="Stop"></a></li>         
+      </ul>
+
+      <div id="button-cover"> 
+      </div>
+  </div>
+
+  
+
+
+  <div id="tab-content" class="tab-content">
+  
+    <div id="home" class="tab-pane fade in active">
+      <webview id="main_webview" src=""></webview>
+
+      <div id="overlay-div" class="container-fluid ">
+        <div class="container">
+          <h1><span id="loadingMessage">Loading Exam</span></h1>
+
+          <div id="passwordMessage" style="display:none;">
+          <p>This exam requires a password. Enter the password provided by your instructor please:</p>
+
+          <p>
+          <input id="examPassword" type="password">
+          </p>
+
+          
+          <p>          
+          <button id="cancelButton" class="btn-default actionButton" >Cancel</button>
+          <button id="continueButton" class="btn-primary actionButton" >Continue</button>
+          </p>
+          </div>
+
+          <div id="examMessage" style="display:none;">
+          <p>Please ask your instructor to verify the exam settings on the LockDown Browser dashboard.</p>
+          </div>
+
+          <div id="ldbMessage" style="display:none;">
+          <p>This exam does not require LockDown Browser.</p>
+          </div>
+
+          <div id="cbMessage" style="display:none;">
+          <p>This exam has not been enabled for LockDown Browser on Chromebooks.</p>
+          </div>
+
+          <div id="monMessage" style="display:none;">
+          <p>This exam requires Respondus Monitor, which is not available for Chromebook.</p>
+          </div>
+
+          <div id="exiterrorButton" style="display:none;">
+            <button id="exitbutton" class="btn-primary actionButton" >Exit</button>
+          </div>
+        </div>
+       </div>
+
+       <div id="overlay-started-div" class="container-fluid">
+          <h1>Loading Exam</h1>
+       </div>
+
+       <div id="overlay-complete-div" class="container-fluid">
+          <h1>Exam Complete</h1>
+          <h2>To close the test window, please sign out or restart  your device.</h2>
+       </div>
+
+       <div id="overlay-debug" class="container-fluid">       
+       <p>
+        <textarea id="debug-textarea" rows="20" cols="50"></textarea>
+        <p>
+        <button id="debug-exitbutton" class="btn-primary actionButton" >Exit</button>
+       </div>
+
+       <div id="overlay-review-div" class="container-fluid">       
+       </div>
+
+       <div id="overlay-dialog" class="container-fluid ">
+        <div class="container">    
+        
+        <p><span id="dialogTextSpan"></span></p>      
+
+
+        <div id="yesnodiv">
+          <div id="yesDialogButtonDiv">
+              <button id="yesDialogButton" class="btn-primary actionButton" ><span class="i8" data-string="yes_button"></button>
+          </div>
+
+          <div id="noDialogButtonDiv">
+              <button id="noDialogButton" class="btn-primary actionButton" ><span class="i8" data-string="no_button"></button>
+          </div>
+        </div>
+        </center>
+
+        </div>
+      </div>
+      
+
+    </div>
+    
+  </div>
+</div>
+
+<input id="sandbox" style="outline:0px;"></input>
+
+<div id="listener">
+    <embed id="ldb_assist"
+             width=0 height=0
+             src="native/ldb_assist.nmf"
+             type="application/x-pnacl" />
+</div>
+
+   <script src="js/jquery.min.js"></script>
+   <script src="js/bootstrap.js"></script>
+   <script src="js/blowfish.js"></script>
+   <script src="js/md5.js"></script>
+
+   <script src="js/cookies.js"></script>
+   <script src="js/collegeboard_control.js"></script>
+   <script src="js/blockkeys.js"></script>
+   
+
+   
+</body>
+</html>
