@@ -2,7 +2,7 @@
 
 ## What Is OpenKiosk?
 
-The name *OpenKiosk* is a little misleading because this repository is a group of crx and other application files I dumped from my school chromebook using a little bug that has gone unpatched for several months.
+This repository is a group of crx and other application files I dumped from my school chromebook using a little bug that has gone unpatched for several months.
 
 ## Why?
 
