@@ -10,5 +10,5 @@ Because its fun. (I do not condone cheating using these files)
 
 ## How Can I get the same files from my chromebook?
 
-The aformentioned bug. open crosh (ctrl+alt+t) then run set_cellular_ppp \';bash;\' to open up a bash prompt. From there I just tar cvf and tar czvf'd the /home/chronos and /home/user directories.
+The aformentioned bug. open crosh (ctrl+alt+t) then run "set_cellular_ppp \\';bash;\\'" to open up a bash prompt. From there I just tar cvf and tar czvf'd the /home/chronos and /home/user directories.
 
