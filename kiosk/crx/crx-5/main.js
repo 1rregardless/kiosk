@@ -1083,7 +1083,7 @@ try {
 
   // If we are in Kiosk mode, let the webview go to our servers. Otherwise show
   // an error
-  if (window.IS_KIOSK_SESSION) {
+  if (true) {
     chrome.storage.local.get('launchUrl', function(value) {
       var url = value.launchUrl || defaultUrl; // We are first checking local
       // storage if a new default has
