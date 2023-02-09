@@ -7,5 +7,5 @@ window.config = {
    "enableNavBttns": true,
    "sessionDataTimeoutTime": 30,
    "sessionTimeoutTime": 30,
-   "kioskEnabled": true
+   "kioskEnabled": false
 };
